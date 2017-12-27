@@ -6,7 +6,7 @@ Emoji completion in fish shell
 fisher install Tosuke/emoji-cli-fish
 ```
 
-## Dependents
+## Dependencies
 - jq
 - fzf
 

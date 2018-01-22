@@ -1,7 +1,7 @@
-bind \cs "__emoji-cli_name"
-bind \cx "__emoji-cli_emoji"
+set -q EMOJI_CLI_KEYBIND; or set -l EMOJI_CLI_KEYBIND \cs
+
+bind $EMOJI_CLI_KEYBIND "__emoji-cli"
 
 if bind -M insert >/dev/null ^/dev/null
-  bind -M insert \cs "__emoji-cli_name"
-  bind -M insert \cx "__emoji-cli_emoji"
+  bind -M insert $EMOJI_CLI_KEYBIND "__emoji-cli"
 end

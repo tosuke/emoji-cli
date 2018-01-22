@@ -1,4 +1,4 @@
-function available
+function __emoji-cli_available
   for cmd in $argv
     if which $cmd >/dev/null ^&1;
       echo $cmd
@@ -11,10 +11,12 @@ function __emoji-cli -d 'Emoji completion on the command line'
   set -q EMOJI_CLI_FILTER; or set -l EMOJI_CLI_FILTER 'fzy' 'fzf' 'peco' 'percol'
   set -l list @emoji
   echo $list \
-    | eval (available $EMOJI_CLI_FILTER) \
+    | eval (__emoji-cli_available $EMOJI_CLI_FILTER) \
     | sed -E "s/^[^:]+//" \
     | read -l result
   
-  commandline -it -- $result
+  if test -n "$result";
+    commandline -it -- "$result"
+  end
   commandline -f repaint
 end

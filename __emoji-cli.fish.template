@@ -1,6 +1,6 @@
 function __emoji-cli_available
   for cmd in $argv
-    if which $cmd >/dev/null ^&1;
+    if which (string match -r '^[\S]+' "$cmd") >/dev/null ^&1;
       echo $cmd
       break
     end

@@ -8,13 +8,13 @@ $ git commit -m "^s
 ```
 
 ## :package: Installation
-### Use [**Fisherman**](https://github.com/fisherman/fisherman)
+### With [**Fisherman**](https://github.com/fisherman/fisherman)
 ```shell
 $ fisher Tosuke/emoji-cli
 ```
-### Use [**Fundle**](https://github.com/tuvistavie/fundle)
-```
-// config.fish
+### With [**Fundle**](https://github.com/tuvistavie/fundle)
+```fish
+# config.fish
 ...
 fundle plugin 'Tosuke/emoji-cli'
 ...

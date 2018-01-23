@@ -12,13 +12,6 @@ $ git commit -m "^s
 ```shell
 $ fisher Tosuke/emoji-cli
 ```
-### With [**Fundle**](https://github.com/tuvistavie/fundle)
-```fish
-# config.fish
-...
-fundle plugin 'Tosuke/emoji-cli'
-...
-```
 
 ## Requirements
 - An interactive filter

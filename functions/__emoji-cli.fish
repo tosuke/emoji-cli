@@ -28,7 +28,7 @@ function __emoji-cli -d 'Emoji completion on the command line'
     end
   end
 
-  cat (dirname (realpath (status -f)))/emoji.tsv.fish \
+  cat (dirname (realpath (status -f)))/../emoji.tsv \
     | awk '{ print ":"$1": "$2}' \
     | eval (__emoji-cli_available $EMOJI_CLI_FILTER)" --query '$query'" \
     | string match -r ':[^:]+:' \
